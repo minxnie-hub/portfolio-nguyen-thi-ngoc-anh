@@ -20,9 +20,9 @@
   --slate-900: #0f172a;
   
   /* Semantic Tokens */
-  --bg-app: #F6FAFF;
+  --bg-app: #2A3446;
   --bg-surface: #ffffff;
-  --bg-navbar: rgba(255, 255, 255, 0.72);
+  --bg-navbar: rgba(255, 255, 255, 0.08);
   
   --text-main: var(--slate-800);
   --text-secondary: var(--slate-500);
@@ -34,7 +34,7 @@
   --primary-border: var(--blue-200);
   
   --border-light: var(--blue-200);
-  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.6);
   --glass-bg: rgba(255, 255, 255, 0.7);
   
   /* Spacing Scale */
@@ -52,10 +52,10 @@
   --font-chinese: 'Noto Serif SC', 'Georgia', serif;
   
   /* Shadow Tiers */
-  --shadow-sm: 0 1px 8px rgba(95, 174, 255, 0.06);
-  --shadow-md: 0 10px 35px rgba(95, 174, 255, 0.12);
-  --shadow-lg: 0 20px 50px rgba(95, 174, 255, 0.18);
-  --shadow-glow: 0 8px 24px rgba(95, 174, 255, 0.22);
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 18px 45px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 25px 60px rgba(0, 0, 0, 0.18);
+  --shadow-glow: 0 12px 32px rgba(0, 0, 0, 0.16);
   
   /* Radii */
   --radius-sm: 8px;
@@ -84,7 +84,8 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--text-main);
-  background: linear-gradient(180deg, #F8FCFF 0%, #EEF7FF 100%);
+  background: linear-gradient(180deg, #2A3446 0%, #334155 100%),
+              radial-gradient(circle at top center, rgba(95,174,255,0.12), transparent 60%);
   background-attachment: fixed;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -122,7 +123,7 @@ a:hover {
   font-family: var(--font-chinese);
   font-size: 9rem;
   font-weight: 700;
-  color: rgba(95, 174, 255, 0.04);
+  color: rgba(255, 255, 255, 0.06);
   writing-mode: vertical-rl;
   text-orientation: mixed;
   pointer-events: none;
@@ -157,10 +158,10 @@ a:hover {
   left: 0;
   right: 0;
   height: 70px;
-  background-color: var(--bg-navbar);
+  background-color: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--glass-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 100;
   transition: var(--transition-smooth);
 }
@@ -200,8 +201,8 @@ a:hover {
   font-size: 1.4rem;
   font-weight: 800;
   letter-spacing: -0.5px;
-  color: var(--text-heading);
-  background: linear-gradient(135deg, var(--text-heading) 0%, var(--blue-700) 100%);
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, var(--blue-300) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -214,15 +215,15 @@ a:hover {
 .nav-link {
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.6);
   padding: var(--space-4) var(--space-8);
   border-radius: var(--radius-sm);
   transition: var(--transition-smooth);
 }
 
 .nav-link:hover {
-  color: var(--blue-700);
-  background-color: var(--blue-100);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .nav-link.active {
@@ -240,15 +241,13 @@ a:hover {
 
 .profile-card {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: var(--radius-lg);
   padding: var(--space-16);
   box-shadow: var(--shadow-md);
   margin-bottom: var(--space-12);
   overflow: hidden;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 /* Decorative Traditional Cloud Paths */
@@ -265,13 +264,13 @@ a:hover {
 .cloud-decor-left {
   top: 15px;
   left: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath d='M10 30 C 5 25, 0 35, 10 40 C 20 40, 25 30, 35 30 C 45 30, 50 40, 60 40 C 70 40, 75 30, 85 35 C 95 35, 90 25, 80 25 C 70 25, 65 30, 55 25 C 45 20, 35 25, 25 25 C 15 25, 12 30, 10 30 Z' fill='none' stroke='%235FAEFF' stroke-width='2'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath d='M10 30 C 5 25, 0 35, 10 40 C 20 40, 25 30, 35 30 C 45 30, 50 40, 60 40 C 70 40, 75 30, 85 35 C 95 35, 90 25, 80 25 C 70 25, 65 30, 55 25 C 45 20, 35 25, 25 25 C 15 25, 12 30, 10 30 Z' fill='none' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E");
 }
 
 .cloud-decor-right {
   bottom: 15px;
   right: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath d='M90 20 C 95 25, 100 15, 90 10 C 80 10, 75 20, 65 20 C 55 20, 50 10, 40 10 C 30 10, 25 20, 15 15 C 5 15, 10 25, 20 25 C 30 25, 35 20, 45 25 C 55 30, 65 25, 75 25 C 85 25, 88 20, 90 20 Z' fill='none' stroke='%235FAEFF' stroke-width='2'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath d='M90 20 C 95 25, 100 15, 90 10 C 80 10, 75 20, 65 20 C 55 20, 50 10, 40 10 C 30 10, 25 20, 15 15 C 5 15, 10 25, 20 25 C 30 25, 35 20, 45 25 C 55 30, 65 25, 75 25 C 85 25, 88 20, 90 20 Z' fill='none' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E");
 }
 
 .profile-header {
@@ -349,11 +348,11 @@ a:hover {
 }
 
 .profile-title h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 800;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.02em;
   margin-top: 4px;
-  color: var(--blue-700);
+  color: #000000;
 }
 
 .profile-title .subtitle {
@@ -427,19 +426,24 @@ a:hover {
 }
 
 .bio-heading h2 {
-  font-size: 2.2rem;
-  letter-spacing: -0.5px;
-  color: var(--blue-700);
+  font-size: 2.4rem;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  background: linear-gradient(180deg, #A9D8FF 0%, #78BFFF 50%, #5FAEFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 12px rgba(95,174,255,.35), 0 4px 18px rgba(95,174,255,.18);
+  filter: drop-shadow(0 0 20px rgba(95,174,255,.2));
+  position: relative;
 }
 
 .about-card {
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: var(--radius-md);
   padding: 2rem 2.5rem;
   box-shadow: var(--shadow-sm);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 .goals-grid {
@@ -450,14 +454,12 @@ a:hover {
 
 .goal-card {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: var(--radius-md);
   padding: var(--space-12);
   box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 .goal-card::after {
@@ -467,7 +469,7 @@ a:hover {
   right: 0;
   width: 40px;
   height: 40px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M30 40 L40 40 L40 30 Z' fill='%235FAEFF' fill-opacity='0.08'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M30 40 L40 40 L40 30 Z' fill='%235FAEFF' fill-opacity='0.12'/%3E%3C/svg%3E");
   pointer-events: none;
 }
 
@@ -529,9 +531,15 @@ a:hover {
 }
 
 .section-header h2 {
-  font-size: 2.6rem;
-  letter-spacing: -0.5px;
-  color: var(--blue-700);
+  font-size: 2.8rem;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  background: linear-gradient(180deg, #A9D8FF 0%, #78BFFF 50%, #5FAEFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 12px rgba(95,174,255,.35), 0 4px 18px rgba(95,174,255,.18);
+  filter: drop-shadow(0 0 20px rgba(95,174,255,.2));
 }
 
 .section-header p {
@@ -549,15 +557,13 @@ a:hover {
 
 .bento-card {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
   box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 /* Traditional Chinese Key Fret (Huiwen) Top Border Pattern */
@@ -716,14 +722,12 @@ a:hover {
 
 .summary-card {
   position: relative;
-  background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(220,239,255,0.5) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: var(--radius-lg);
   padding: var(--space-16);
   box-shadow: var(--shadow-md);
   overflow: visible;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 .summary-card::before {
@@ -751,9 +755,15 @@ a:hover {
 }
 
 .summary-heading h2 {
-  font-size: 2.6rem;
-  letter-spacing: -0.5px;
-  color: var(--blue-700);
+  font-size: 2.8rem;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  background: linear-gradient(180deg, #A9D8FF 0%, #78BFFF 50%, #5FAEFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 12px rgba(95,174,255,.35), 0 4px 18px rgba(95,174,255,.18);
+  filter: drop-shadow(0 0 20px rgba(95,174,255,.2));
 }
 
 .summary-block h3 {
@@ -774,10 +784,8 @@ a:hover {
 .summary-reflection {
   border-radius: var(--radius-md);
   padding: var(--space-12);
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(207, 231, 255, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: var(--blue-50);
+  border: 1px solid var(--blue-200);
 }
 
 .summary-intro,
@@ -842,8 +850,8 @@ a:hover {
    FOOTER
 ---------------------------------------------------- */
 .footer {
-  background: linear-gradient(180deg, var(--blue-50) 0%, #EEF7FF 100%);
-  border-top: 1px solid var(--blue-200);
+  background: linear-gradient(180deg, #2A3446 0%, #334155 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem 0;
 }
 
@@ -870,14 +878,14 @@ a:hover {
 }
 
 .footer-left strong {
-  color: var(--blue-700);
+  color: #ffffff;
   font-size: 0.95rem;
   font-weight: 700;
 }
 
 .footer-left span,
 .footer-right span {
-  color: #94a3b8;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 0.82rem;
   font-weight: 600;
 }
@@ -903,7 +911,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(15, 23, 42, 0.35);
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 200;
@@ -921,8 +929,8 @@ a:hover {
 }
 
 .modal-wrapper {
-  background-color: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   width: 90%;
@@ -932,8 +940,6 @@ a:hover {
   flex-direction: column;
   transform: translateY(40px) scale(0.95);
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 .modal-overlay.show .modal-wrapper {
@@ -1056,7 +1062,7 @@ a:hover {
 
 /* Image container and details */
 .content-image-box {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: #ffffff;
   border: 1px solid var(--blue-200);
   border-radius: var(--radius-md);
   padding: var(--space-4);
@@ -1180,7 +1186,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .section-header h2 {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
   }
 
   .nav-links {
@@ -1194,7 +1200,7 @@ a:hover {
   }
 
   .bio-heading h2 {
-    font-size: 1.85rem;
+    font-size: 2rem;
   }
 
   .about-card {
@@ -1232,7 +1238,7 @@ a:hover {
   }
 
   .summary-heading h2 {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
   }
   
   .modal-wrapper {
