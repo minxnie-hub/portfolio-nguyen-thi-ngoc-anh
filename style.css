@@ -352,7 +352,10 @@ a:hover {
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-top: 4px;
-  color: #000000;
+  background: linear-gradient(135deg, #142033 0%, #1F376B 48%, #2563EB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .profile-title .subtitle {
@@ -877,15 +880,22 @@ a:hover {
   text-align: right;
 }
 
+.footer-left strong,
+.footer-left span,
+.footer-right span {
+  background: linear-gradient(135deg, #F8FCFF 0%, #DCEFFF 42%, #8FC7FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .footer-left strong {
-  color: #ffffff;
   font-size: 0.95rem;
   font-weight: 700;
 }
 
 .footer-left span,
 .footer-right span {
-  color: rgba(255, 255, 255, 0.5);
   font-size: 0.82rem;
   font-weight: 600;
 }
