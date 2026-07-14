@@ -46,8 +46,8 @@
   --space-24: 3rem;    /* 48px */
   
   /* Typography Scale */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: 'Outfit', var(--font-sans);
+  --font-sans: 'Quicksand', 'Nunito', sans-serif;
+  --font-display: 'Baloo 2', cursive;
   --font-chinese: 'Noto Serif SC', 'Georgia', serif;
   
   /* Shadow Tiers */
@@ -399,6 +399,40 @@ a:hover {
   text-align: justify;
   position: relative;
   z-index: 1;
+  margin-top: var(--space-16);
+}
+
+.bio-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+  text-align: center;
+}
+
+.bio-kicker {
+  color: #8b5cf6;
+  background: rgba(196, 181, 253, 0.18);
+  border: 1px solid rgba(196, 181, 253, 0.28);
+  border-radius: 999px;
+  padding: 4px 16px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.bio-heading h2 {
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+}
+
+.about-card {
+  background: var(--bg-card, var(--bg-surface));
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 2rem 2.5rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .goals-grid {
@@ -454,7 +488,8 @@ a:hover {
    BENTO GRID / ASSIGNMENTS
 ---------------------------------------------------- */
 .assignments-section {
-  padding: var(--space-24) 0;
+  padding-top: 130px;
+  padding-bottom: var(--space-24);
 }
 
 .section-header {
@@ -462,8 +497,21 @@ a:hover {
   margin-bottom: var(--space-16);
 }
 
+.section-kicker {
+  display: inline-block;
+  color: #8b5cf6;
+  background: rgba(196, 181, 253, 0.18);
+  border: 1px solid rgba(196, 181, 253, 0.28);
+  border-radius: 999px;
+  padding: 4px 16px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: var(--space-4);
+}
+
 .section-header h2 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   letter-spacing: -0.5px;
 }
 
@@ -640,42 +688,47 @@ a:hover {
    REFLECTION & SUMMARY SECTION
 ---------------------------------------------------- */
 .summary-section {
+  padding-top: 130px;
   padding-bottom: var(--space-24);
 }
 
 .summary-card {
   position: relative;
-  background: linear-gradient(135deg, var(--bg-surface) 0%, var(--blue-50) 100%);
-  border: 1px solid var(--glass-border);
+  background: linear-gradient(135deg, #ffffff 0%, #eff8ff 100%);
+  border: 1px solid var(--primary-border);
   border-radius: var(--radius-lg);
   padding: var(--space-16);
   box-shadow: var(--shadow-md);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .summary-card::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  width: 80px;
-  height: 80px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%233b82f6' stroke-opacity='0.08' stroke-width='2'/%3E%3Ctext x='50' y='65' font-family='sans-serif' font-size='40' text-anchor='middle' fill='%233b82f6' fill-opacity='0.08'%3E悟%3C/text%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-  pointer-events: none;
+  display: none;
 }
 
-.summary-card h2 {
-  font-size: 2rem;
-  margin-bottom: var(--space-12);
+.summary-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-16);
   text-align: center;
 }
 
-.summary-content-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: var(--space-16);
+.summary-kicker {
+  color: var(--primary-hover);
+  background: var(--primary-light);
+  border: 1px solid var(--primary-border);
+  border-radius: 999px;
+  padding: 4px 16px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.summary-heading h2 {
+  font-size: 2.6rem;
+  letter-spacing: -0.5px;
 }
 
 .summary-block h3 {
@@ -684,52 +737,134 @@ a:hover {
   color: var(--primary-hover);
 }
 
-.summary-block p {
+.summary-block p,
+.lesson-item p {
   font-size: 1rem;
   color: var(--text-main);
-  text-align: justify;
+  line-height: 1.75;
 }
 
-.summary-block ul {
-  list-style: none;
+.summary-intro,
+.summary-lessons,
+.summary-reflection {
+  border-radius: var(--radius-md);
+  padding: var(--space-12);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(125, 211, 252, 0.45);
 }
 
-.summary-block li {
-  font-size: 0.95rem;
-  position: relative;
+.summary-intro,
+.summary-lessons {
+  margin-bottom: var(--space-12);
+}
+
+.experience-list {
+  display: grid;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.experience-list p {
   padding-left: var(--space-8);
-  margin-bottom: var(--space-4);
+  border-left: 3px solid var(--primary);
 }
 
-.summary-block li::before {
-  content: '✦';
-  position: absolute;
-  left: 0;
-  color: var(--primary);
+.summary-emphasis {
+  margin-top: var(--space-8);
+  color: var(--primary-hover) !important;
+  font-weight: 600;
+}
+
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+}
+
+.lesson-item {
+  padding: var(--space-8);
+  background: var(--blue-50);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-sm);
+}
+
+.lesson-item h4 {
+  margin-bottom: var(--space-4);
+  color: var(--text-heading);
+  font-size: 1rem;
+}
+
+.lesson-item h4 span {
+  color: var(--primary-hover);
+  font-weight: 600;
+}
+
+.summary-reflection {
+  border-left: 4px solid var(--primary);
+}
+
+.summary-reflection h3 {
+  color: var(--text-heading);
 }
 
 .summary-footer {
-  text-align: center;
-  border-top: 1px dashed var(--border-light);
-  margin-top: var(--space-12);
-  padding-top: var(--space-8);
-  font-style: italic;
-  color: var(--text-secondary);
+  display: none;
 }
 
 /* ----------------------------------------------------
    FOOTER
 ---------------------------------------------------- */
 .footer {
-  background-color: var(--bg-surface);
-  border-top: 1px solid var(--border-light);
-  padding: var(--space-12) 0;
-  text-align: center;
+  background-color: #f7fff8;
+  border-top: 1px solid rgba(154, 197, 246, 0.18);
+  padding: 1rem 0;
 }
 
-.footer p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-left strong {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.footer-left span,
+.footer-right span {
+  color: #94a3b8;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .footer-content {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-right {
+    text-align: left;
+  }
 }
 
 /* ----------------------------------------------------
@@ -1040,6 +1175,10 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2.1rem;
+  }
+
   .nav-links {
     gap: var(--space-4);
   }
@@ -1048,6 +1187,14 @@ a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .bio-heading h2 {
+    font-size: 1.85rem;
+  }
+
+  .about-card {
+    padding: var(--space-8) var(--space-12);
   }
   
   .badge-major {
@@ -1072,12 +1219,36 @@ a:hover {
     grid-column: span 1;
   }
   
-  .summary-content-grid {
+  .lessons-grid {
     grid-template-columns: 1fr;
+  }
+
+  .summary-card {
+    padding: var(--space-8);
+  }
+
+  .summary-heading h2 {
+    font-size: 2.1rem;
   }
   
   .modal-wrapper {
     width: 95%;
     height: 90vh;
   }
+}
+
+/* =====================================================
+   TAB-BASED PAGE NAVIGATION
+   ===================================================== */
+.page {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.page.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }

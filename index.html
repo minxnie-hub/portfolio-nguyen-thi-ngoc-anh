@@ -7,7 +7,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Baloo+2:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,16 +29,16 @@
         </div>
         <span class="brand-text">Ngọc Ánh</span>
       </div>
-      <div class="nav-links">
-        <a href="#gioi-thieu" class="nav-link active">👋 Giới thiệu</a>
-        <a href="#bai-tap" class="nav-link">✨ Bài tập</a>
-        <a href="#tong-ket" class="nav-link">💖 Tổng kết</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#" onclick="go('gioi-thieu');return false" class="nav-link active"> Giới thiệu</a>
+        <a href="#" onclick="go('bai-tap');return false" class="nav-link">Bài tập</a>
+        <a href="#" onclick="go('tong-ket');return false" class="nav-link"> Tổng kết</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero & Profile Section -->
-  <section id="gioi-thieu" class="hero-section">
+  <section id="gioi-thieu" class="hero-section page active">
     <div class="container">
       <div class="profile-card animate-fade-in">
         
@@ -76,39 +76,29 @@
           </div>
         </div>
 
-        <div class="profile-bio">
-          <p>
-            Chào mừng bạn đến với không gian số của mình! Đây là nơi lưu giữ tất cả các sản phẩm thực hành đầy tâm huyết mà mình đã thực hiện trong môn học <em>Nhập môn Công nghệ số và Ứng dụng AI</em>. Với vai trò là một sinh viên ngành Ngôn ngữ Trung Quốc, mình tin rằng việc nắm vững công nghệ và AI sẽ là đôi cánh giúp mình tự tin vươn xa và mở rộng thế giới quan tri thức! 🌟
-          </p>
-        </div>
       </div>
 
-      <!-- Bento Goals & Direction -->
-      <div class="goals-grid">
-        <div class="goal-card animate-slide-up" style="animation-delay: 0.1s;">
-          <div class="card-icon">🎯</div>
-          <h3>Mục tiêu học tập</h3>
-          <p>
-            Thấu hiểu và làm chủ các khái niệm cốt lõi của công nghệ số và ứng dụng AI vào thực tế. Rèn luyện tư duy phản biện khi khai thác thông tin, sử dụng AI như một trợ lý dịch thuật và biên dịch tiếng Trung đắc lực. Đặc biệt là hình thành tư duy sử dụng AI có trách nhiệm, giữ vững tính chính trực học thuật trong học tập và nghiên cứu.
-          </p>
+      <div class="profile-bio">
+        <div class="bio-heading">
+          <span class="bio-kicker">GIỚI THIỆU</span>
+          <h2>About me &amp; Portfolio</h2>
         </div>
-        <div class="goal-card animate-slide-up" style="animation-delay: 0.2s;">
-          <div class="card-icon">🚀</div>
-          <h3>Định hướng phát triển</h3>
-          <p>
-            Liên tục cập nhật và nâng cao kỹ năng sử dụng các công cụ cộng tác, quản lý dữ liệu và thiết kế số. Ứng dụng AI tạo sinh một cách sáng tạo để thiết kế các học liệu giảng dạy tiếng Trung cá nhân hóa, phục vụ đắc lực cho công việc chuyên môn trong tương lai. Trở thành một nhân sự ngôn ngữ hiện đại, năng động và thích ứng nhanh với kỷ nguyên số.
-          </p>
+        <div class="about-card">
+            <p>Chào mừng bạn đến với không gian số của mình!</p>
+            <p>Mình là <strong>Nguyễn Thị Ngọc Ánh</strong> , sinh viên năm nhất ngành <strong>Ngôn ngữ và văn hoá Trung Quốc</strong> tại <strong>Trường Đại học Ngoại ngữ - ĐHQGHN</strong>. Mình có niềm đam mê lớn với ngôn ngữ, văn hóa và luôn tò mò về cách công nghệ số cùng AI có thể định hình lại cách chúng ta giao tiếp, dịch thuật và kết nối toàn cầu.</p>
+            <p>Portfolio này tổng hợp toàn bộ nội dung và hình ảnh minh chứng của 6 bài tập môn <strong>"Nhập môn Công nghệ số và Ứng dụng Trí tuệ Nhân tạo"</strong>. Mỗi bài tập được trình bày đầy đủ như bản gốc - bao gồm mục tiêu, quy trình thực hiện chi tiết, kết quả và ảnh chụp màn hình - ghi lại trọn vẹn hành trình bước ra khỏi <strong>"vùng an toàn"</strong> để làm quen với tư duy thế giới số của một sinh viên chuyên ngữ.</p>
+            <p><strong>Hành trình giao thoa giữa Ngôn ngữ và Công nghệ</strong> Mục tiêu của mình là trở thành một chuyên gia ngôn ngữ toàn diện trong thời đại mới: giỏi chuyên môn, có tư duy phản biện và biết ứng dụng AI một cách thông minh, có trách nhiệm để tối ưu hóa hiệu quả công việc. Portfolio này chính là bước khởi đầu cho hành trình phá vỡ giới hạn đó!</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Bento Assignments Grid -->
-  <section id="bai-tap" class="assignments-section">
+  <section id="bai-tap" class="assignments-section page">
     <div class="container">
       <div class="section-header">
-        <h2>Sản phẩm học tập nổi bật</h2>
-        <p>Tuyển tập 6 bài thực hành thực tế minh chứng cho sự trưởng thành về kỹ năng số và tư duy AI</p>
+        <span class="section-kicker">DỰ ÁN</span>
+        <h2>Bài tập cá nhân</h2>
       </div>
 
       <div class="bento-grid">
@@ -218,29 +208,50 @@
   </section>
 
   <!-- Reflection & Summary Section -->
-  <section id="tong-ket" class="summary-section">
+  <section id="tong-ket" class="summary-section page">
     <div class="container">
       <div class="summary-card animate-slide-up">
-        <h2>Tổng kết hành trình & Suy ngẫm</h2>
-        <div class="summary-content-grid">
-          <div class="summary-block">
-            <h3>🌟 Sự thay đổi nhận thức</h3>
-            <p>
-              Bước vào môn học, mình từng nghĩ AI chỉ là một công cụ hỗ trợ tìm kiếm nâng cao hoặc sửa lỗi ngữ pháp thông thường. Nhưng qua các bài thực hành thực tế, mình nhận ra AI là một người bạn đồng hành thông minh, một trợ lý đắc lực có thể mở rộng giới hạn sáng tạo và tối ưu hóa thời gian học tập của mình.
-            </p>
+        <div class="summary-heading">
+          <span class="summary-kicker">KẾT THÚC</span>
+          <h2>Tổng kết</h2>
+        </div>
+
+        <div class="summary-block summary-intro">
+          <h3>Cảm xúc và Trải nghiệm sau môn học</h3>
+          <p>Hành trình chinh phục 6 bài tập lớn của môn <strong>"Nhập môn Công nghệ số và Ứng dụng Trí tuệ Nhân tạo"</strong> đã mang lại cho mình - một sinh viên chuyên ngữ - những bước chuyển mình lớn trong tư duy:</p>
+          <div class="experience-list">
+            <p><strong>Từ bỡ ngỡ đến tự tin:</strong> Ban đầu, mình từng e ngại công nghệ khô khan và quá sức với một dân xã hội. Nhưng khi thực hành, mình nhận ra AI chính là "trợ lý đắc lực" giúp mình tối ưu hóa việc học tiếng Trung, tra cứu ngữ pháp và dịch thuật hiệu quả hơn.</p>
+            <p><strong>Nâng cấp tư duy phản biện:</strong> Qua việc tương tác với các công cụ AI, mình hiểu rằng công nghệ không hoàn hảo. Việc luôn kiểm chứng và đánh giá nguồn thông tin giúp mình rèn luyện tư duy phản biện sắc bén hơn.</p>
+            <p><strong>Xóa bỏ nỗi sợ bị thay thế:</strong> Môn học giúp mình thấu hiểu một triết lý quan trọng: AI không thay thế người học ngoại ngữ, nhưng những người biết ứng dụng AI sẽ thay thế những người không biết.</p>
           </div>
-          <div class="summary-block">
-            <h3>🔑 Bài học cốt lõi</h3>
-            <ul>
-              <li><strong>Kỹ năng số căn bản:</strong> Quản lý tệp tin và thông tin học thuật một cách khoa học.</li>
-              <li><strong>Nghệ thuật giao tiếp với AI:</strong> Biết cách viết Prompt rõ ràng, có ngữ cảnh và giới hạn.</li>
-              <li><strong>Hợp tác trong kỷ nguyên số:</strong> Sử dụng các nền tảng trực tuyến để phối hợp nhịp nhàng với đồng đội.</li>
-              <li><strong>Trách nhiệm & Đạo đức:</strong> Luôn kiểm chứng thông tin của AI và tôn trọng bản quyền sở hữu trí tuệ.</li>
-            </ul>
+          <p class="summary-emphasis">Môn học đã giúp mình bước ra khỏi vùng an toàn, tự tin trang bị <strong>"tư duy số"</strong> để sẵn sàng trở thành một chuyên gia ngôn ngữ năng động, bản lĩnh trong thời đại công nghệ.</p>
+        </div>
+
+        <div class="summary-block summary-lessons">
+          <h3>Bài học cốt lõi</h3>
+          <div class="lessons-grid">
+            <div class="lesson-item">
+              <h4>Kỹ năng gợi ý <span>(Prompt Engineering)</span></h4>
+              <p>Biết cách đặt câu lệnh thông minh, rõ ràng để AI hỗ trợ dịch thuật, tối ưu hóa cấu trúc câu ngữ pháp tiếng Trung và tìm kiếm tài liệu học tập chính xác.</p>
+            </div>
+            <div class="lesson-item">
+              <h4>Tư duy phản biện <span>(Critical Thinking)</span></h4>
+              <p>Biết cách đánh giá, sàng lọc và kiểm chứng thông tin do AI tạo ra; không phụ thuộc mù quáng vào công nghệ mà luôn giữ vai trò là người kiểm soát chất lượng cuối cùng.</p>
+            </div>
+            <div class="lesson-item">
+              <h4>Tự học và Thích ứng công nghệ <span>(Adaptability)</span></h4>
+              <p>Xóa bỏ rào cản tâm lý "ngại công nghệ" của dân chuyên ngữ, hình thành thói quen chủ động tìm tòi và ứng dụng các công cụ AI mới vào chuyên ngành.</p>
+            </div>
+            <div class="lesson-item">
+              <h4>Trách nhiệm &amp; Đạo đức</h4>
+              <p>Luôn kiểm chứng thông tin của AI và tôn trọng bản quyền sở hữu trí tuệ.</p>
+            </div>
           </div>
         </div>
-        <div class="summary-footer">
-          <p>💖 Cảm ơn các bạn đã ghé thăm portfolio của mình! Chúc các bạn luôn tìm thấy niềm cảm hứng học tập trong thế giới số!</p>
+
+        <div class="summary-block summary-reflection">
+          <h3>Sự thay đổi nhận thức</h3>
+          <p>Môn học này đã thay đổi hoàn toàn tư duy của mình, giúp mình nhận ra AI không phải là "đối thủ" đe dọa cơ hội việc làm của dân chuyên ngữ, mà là một "cộng sự" đắc lực giúp tối ưu hóa việc học tập và dịch thuật. Mình đã bứt phá khỏi định kiến "dân xã hội ngại công nghệ" để chủ động trang bị năng lực số, đồng thời hiểu sâu sắc rằng: AI dù có dịch nhanh đến đâu thì sự tinh tế về văn hóa, cảm xúc và tư duy ngữ cảnh của con người vẫn là giá trị cốt lõi không thể thay thế.</p>
         </div>
       </div>
     </div>
@@ -249,7 +260,16 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Nguyễn Thị Ngọc Ánh. Thực hiện bằng tình yêu và công nghệ. 💎✨</p>
+      <div class="footer-content">
+        <div class="footer-left">
+          <strong>Nguyễn Thị Ngọc Ánh</strong>
+          <span>SV Ngôn ngữ và văn hoá Trung Quốc · MSSV: 25041549</span>
+        </div>
+        <div class="footer-right">
+          <span>Đại học Ngoại ngữ — ĐHQGHN</span>
+          <span>Kỹ năng Số & Trí tuệ Nhân tạo — 2025–2026</span>
+        </div>
+      </div>
     </div>
   </footer>
 
