@@ -1,15 +1,15 @@
 /* ----------------------------------------------------
-   DESIGN SYSTEM & VARIABLES (Pastel Blue Theme)
+   DESIGN SYSTEM & VARIABLES (Baby Blue Premium Theme)
 ---------------------------------------------------- */
 :root {
   /* Primitive Tokens (Colors) */
-  --blue-50: #f4f9ff;
-  --blue-100: #e0f2fe;
-  --blue-200: #bae6fd;
-  --blue-300: #7dd3fc;
-  --blue-500: #3b82f6;
-  --blue-600: #2563eb;
-  --blue-700: #1d4ed8;
+  --blue-50: #F6FAFF;
+  --blue-100: #DCEFFF;
+  --blue-200: #CFE7FF;
+  --blue-300: #8FC7FF;
+  --blue-500: #5FAEFF;
+  --blue-600: #479FFF;
+  --blue-700: #2F6FE4;
   
   --slate-50: #f8fafc;
   --slate-100: #f1f5f9;
@@ -20,30 +20,31 @@
   --slate-900: #0f172a;
   
   /* Semantic Tokens */
-  --bg-app: var(--slate-50);
+  --bg-app: #F6FAFF;
   --bg-surface: #ffffff;
-  --bg-navbar: rgba(255, 255, 255, 0.8);
+  --bg-navbar: rgba(255, 255, 255, 0.72);
   
   --text-main: var(--slate-800);
   --text-secondary: var(--slate-500);
   --text-heading: var(--slate-900);
   
   --primary: var(--blue-500);
-  --primary-hover: var(--blue-600);
+  --primary-hover: var(--blue-700);
   --primary-light: var(--blue-100);
   --primary-border: var(--blue-200);
   
-  --border-light: var(--slate-200);
-  --glass-border: rgba(255, 255, 255, 0.6);
+  --border-light: var(--blue-200);
+  --glass-border: rgba(255, 255, 255, 0.4);
   --glass-bg: rgba(255, 255, 255, 0.7);
   
   /* Spacing Scale */
-  --space-2: 0.25rem;  /* 4px */
-  --space-4: 0.5rem;   /* 8px */
-  --space-8: 1rem;     /* 16px */
-  --space-12: 1.5rem;  /* 24px */
-  --space-16: 2rem;    /* 32px */
-  --space-24: 3rem;    /* 48px */
+  --space-2: 0.25rem;
+  --space-4: 0.5rem;
+  --space-6: 0.75rem;
+  --space-8: 1rem;
+  --space-12: 1.5rem;
+  --space-16: 2rem;
+  --space-24: 3rem;
   
   /* Typography Scale */
   --font-sans: 'Quicksand', 'Nunito', sans-serif;
@@ -51,9 +52,10 @@
   --font-chinese: 'Noto Serif SC', 'Georgia', serif;
   
   /* Shadow Tiers */
-  --shadow-sm: 0 2px 8px rgba(148, 163, 184, 0.05);
-  --shadow-md: 0 10px 30px rgba(154, 197, 246, 0.12);
-  --shadow-lg: 0 20px 50px rgba(154, 197, 246, 0.2);
+  --shadow-sm: 0 1px 8px rgba(95, 174, 255, 0.06);
+  --shadow-md: 0 10px 35px rgba(95, 174, 255, 0.12);
+  --shadow-lg: 0 20px 50px rgba(95, 174, 255, 0.18);
+  --shadow-glow: 0 8px 24px rgba(95, 174, 255, 0.22);
   
   /* Radii */
   --radius-sm: 8px;
@@ -82,13 +84,7 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--text-main);
-  background-color: var(--bg-app);
-  
-  /* Repeating Oriental Wave/Cloud Pattern Background */
-  background-image: 
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg stroke='%233b82f6' stroke-opacity='0.03' stroke-width='1.5' fill='none'%3E%3Cpath d='M0 60 C 15 50, 30 50, 45 60 C 60 70, 75 70, 90 60 C 105 50, 120 50, 135 60'/%3E%3Cpath d='M-15 90 C 0 80, 15 80, 30 90 C 45 100, 60 100, 75 90 C 90 80, 105 80, 120 90 C 135 100, 150 100, 165 90'/%3E%3Cpath d='M-30 30 C -15 20, 0 20, 15 30 C 30 40, 45 40, 60 30 C 75 20, 90 20, 105 30 C 120 40, 135 40, 150 30'/%3E%3C/g%3E%3C/svg%3E"),
-    radial-gradient(at 0% 0%, hsla(210,100%,96%,1) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, hsla(200,100%,97%,1) 0px, transparent 50%);
+  background: linear-gradient(180deg, #F8FCFF 0%, #EEF7FF 100%);
   background-attachment: fixed;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -110,7 +106,7 @@ h1, h2, h3, h4 {
 
 a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--blue-700);
   transition: var(--transition-fast);
 }
 
@@ -126,7 +122,7 @@ a:hover {
   font-family: var(--font-chinese);
   font-size: 9rem;
   font-weight: 700;
-  color: rgba(59, 130, 246, 0.02);
+  color: rgba(95, 174, 255, 0.04);
   writing-mode: vertical-rl;
   text-orientation: mixed;
   pointer-events: none;
@@ -148,7 +144,7 @@ a:hover {
 
 @media (max-width: 1280px) {
   .watermark {
-    display: none; /* Hide watermarks on smaller screens to prevent overflow */
+    display: none;
   }
 }
 
@@ -162,8 +158,8 @@ a:hover {
   right: 0;
   height: 70px;
   background-color: var(--bg-navbar);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--glass-border);
   z-index: 100;
   transition: var(--transition-smooth);
@@ -187,7 +183,7 @@ a:hover {
 }
 
 .brand-seal {
-  color: var(--primary);
+  color: var(--blue-700);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,7 +201,7 @@ a:hover {
   font-weight: 800;
   letter-spacing: -0.5px;
   color: var(--text-heading);
-  background: linear-gradient(135deg, var(--text-heading) 0%, var(--primary) 100%);
+  background: linear-gradient(135deg, var(--text-heading) 0%, var(--blue-700) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -224,9 +220,14 @@ a:hover {
   transition: var(--transition-smooth);
 }
 
-.nav-link:hover, .nav-link.active {
-  color: var(--primary);
-  background-color: var(--primary-light);
+.nav-link:hover {
+  color: var(--blue-700);
+  background-color: var(--blue-100);
+}
+
+.nav-link.active {
+  color: var(--blue-700);
+  background-color: var(--blue-100);
 }
 
 /* ----------------------------------------------------
@@ -239,13 +240,15 @@ a:hover {
 
 .profile-card {
   position: relative;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--glass-border);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: var(--radius-lg);
   padding: var(--space-16);
   box-shadow: var(--shadow-md);
   margin-bottom: var(--space-12);
   overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 /* Decorative Traditional Cloud Paths */
@@ -262,13 +265,13 @@ a:hover {
 .cloud-decor-left {
   top: 15px;
   left: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath d='M10 30 C 5 25, 0 35, 10 40 C 20 40, 25 30, 35 30 C 45 30, 50 40, 60 40 C 70 40, 75 30, 85 35 C 95 35, 90 25, 80 25 C 70 25, 65 30, 55 25 C 45 20, 35 25, 25 25 C 15 25, 12 30, 10 30 Z' fill='none' stroke='%233b82f6' stroke-width='2'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath d='M10 30 C 5 25, 0 35, 10 40 C 20 40, 25 30, 35 30 C 45 30, 50 40, 60 40 C 70 40, 75 30, 85 35 C 95 35, 90 25, 80 25 C 70 25, 65 30, 55 25 C 45 20, 35 25, 25 25 C 15 25, 12 30, 10 30 Z' fill='none' stroke='%235FAEFF' stroke-width='2'/%3E%3C/svg%3E");
 }
 
 .cloud-decor-right {
   bottom: 15px;
   right: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath d='M90 20 C 95 25, 100 15, 90 10 C 80 10, 75 20, 65 20 C 55 20, 50 10, 40 10 C 30 10, 25 20, 15 15 C 5 15, 10 25, 20 25 C 30 25, 35 20, 45 25 C 55 30, 65 25, 75 25 C 85 25, 88 20, 90 20 Z' fill='none' stroke='%233b82f6' stroke-width='2'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath d='M90 20 C 95 25, 100 15, 90 10 C 80 10, 75 20, 65 20 C 55 20, 50 10, 40 10 C 30 10, 25 20, 15 15 C 5 15, 10 25, 20 25 C 30 25, 35 20, 45 25 C 55 30, 65 25, 75 25 C 85 25, 88 20, 90 20 Z' fill='none' stroke='%235FAEFF' stroke-width='2'/%3E%3C/svg%3E");
 }
 
 .profile-header {
@@ -295,12 +298,12 @@ a:hover {
   width: 76px;
   height: 76px;
   border-radius: var(--radius-sm);
-  border: 4px solid var(--primary);
+  border: 4px solid var(--blue-500);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-light);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  background-color: var(--blue-100);
+  box-shadow: 0 4px 16px rgba(95, 174, 255, 0.2);
   transition: var(--transition-smooth);
   z-index: 2;
 }
@@ -309,7 +312,7 @@ a:hover {
   font-family: var(--font-chinese);
   font-size: 2.6rem;
   font-weight: 700;
-  color: var(--primary-hover);
+  color: var(--blue-700);
   line-height: 1;
 }
 
@@ -317,7 +320,7 @@ a:hover {
   position: absolute;
   width: 92px;
   height: 92px;
-  border: 1.5px dashed var(--primary);
+  border: 1.5px dashed var(--blue-500);
   border-radius: 50%;
   animation: spinRing 40s linear infinite;
   pointer-events: none;
@@ -337,8 +340,8 @@ a:hover {
 .badge-major {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--primary-hover);
-  background-color: var(--primary-light);
+  color: var(--blue-700);
+  background-color: var(--blue-100);
   padding: 4px 12px;
   border-radius: 20px;
   align-self: flex-start;
@@ -350,6 +353,7 @@ a:hover {
   font-weight: 800;
   letter-spacing: -0.5px;
   margin-top: 4px;
+  color: var(--blue-700);
 }
 
 .profile-title .subtitle {
@@ -363,8 +367,8 @@ a:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-8);
   margin-bottom: var(--space-12);
-  border-top: 1px dashed var(--border-light);
-  border-bottom: 1px dashed var(--border-light);
+  border-top: 1px dashed var(--blue-200);
+  border-bottom: 1px dashed var(--blue-200);
   padding: var(--space-8) 0;
   position: relative;
   z-index: 1;
@@ -412,9 +416,9 @@ a:hover {
 }
 
 .bio-kicker {
-  color: #8b5cf6;
-  background: rgba(196, 181, 253, 0.18);
-  border: 1px solid rgba(196, 181, 253, 0.28);
+  color: var(--blue-700);
+  background: var(--blue-100);
+  border: 1px solid var(--blue-200);
   border-radius: 999px;
   padding: 4px 16px;
   font-size: 0.72rem;
@@ -425,14 +429,17 @@ a:hover {
 .bio-heading h2 {
   font-size: 2.2rem;
   letter-spacing: -0.5px;
+  color: var(--blue-700);
 }
 
 .about-card {
-  background: var(--bg-card, var(--bg-surface));
-  border: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: var(--radius-md);
   padding: 2rem 2.5rem;
   box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .goals-grid {
@@ -443,12 +450,14 @@ a:hover {
 
 .goal-card {
   position: relative;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--glass-border);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: var(--radius-md);
   padding: var(--space-12);
   box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .goal-card::after {
@@ -458,24 +467,33 @@ a:hover {
   right: 0;
   width: 40px;
   height: 40px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M30 40 L40 40 L40 30 Z' fill='%233b82f6' fill-opacity='0.05'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M30 40 L40 40 L40 30 Z' fill='%235FAEFF' fill-opacity='0.08'/%3E%3C/svg%3E");
   pointer-events: none;
 }
 
 .goal-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary-border);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow);
+  border-color: var(--blue-300);
 }
 
 .card-icon {
   font-size: 2.2rem;
   margin-bottom: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--blue-100);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(95, 174, 255, 0.15);
 }
 
 .goal-card h3 {
   font-size: 1.3rem;
   margin-bottom: var(--space-4);
+  color: var(--blue-700);
 }
 
 .goal-card p {
@@ -499,9 +517,9 @@ a:hover {
 
 .section-kicker {
   display: inline-block;
-  color: #8b5cf6;
-  background: rgba(196, 181, 253, 0.18);
-  border: 1px solid rgba(196, 181, 253, 0.28);
+  color: var(--blue-700);
+  background: var(--blue-100);
+  border: 1px solid var(--blue-200);
   border-radius: 999px;
   padding: 4px 16px;
   font-size: 0.72rem;
@@ -513,6 +531,7 @@ a:hover {
 .section-header h2 {
   font-size: 2.6rem;
   letter-spacing: -0.5px;
+  color: var(--blue-700);
 }
 
 .section-header p {
@@ -530,13 +549,15 @@ a:hover {
 
 .bento-card {
   position: relative;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--glass-border);
+  background-color: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
   box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 /* Traditional Chinese Key Fret (Huiwen) Top Border Pattern */
@@ -547,27 +568,27 @@ a:hover {
   left: 0;
   right: 0;
   height: 8px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='8' viewBox='0 0 16 8'%3E%3Cpath d='M0 4 H4 V0 H12 V8 H8 V4 H10 V6' fill='none' stroke='%233b82f6' stroke-opacity='0.4' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='8' viewBox='0 0 16 8'%3E%3Cpath d='M0 4 H4 V0 H12 V8 H8 V4 H10 V6' fill='none' stroke='%235FAEFF' stroke-opacity='0.5' stroke-width='1.5'/%3E%3C/svg%3E");
   background-repeat: repeat-x;
   background-size: contain;
   transition: var(--transition-smooth);
 }
 
 .bento-card:hover::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='8' viewBox='0 0 16 8'%3E%3Cpath d='M0 4 H4 V0 H12 V8 H8 V4 H10 V6' fill='none' stroke='%232563eb' stroke-opacity='1' stroke-width='1.8'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='8' viewBox='0 0 16 8'%3E%3Cpath d='M0 4 H4 V0 H12 V8 H8 V4 H10 V6' fill='none' stroke='%232F6FE4' stroke-opacity='1' stroke-width='1.8'/%3E%3C/svg%3E");
 }
 
 .bento-card:hover {
   transform: translateY(-6px) scale(1.01);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary-border);
+  box-shadow: var(--shadow-glow);
+  border-color: var(--blue-300);
 }
 
 .card-glow {
   position: absolute;
   width: 100px;
   height: 100px;
-  background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(95, 174, 255, 0.18) 0%, transparent 70%);
   top: -50px;
   right: -50px;
   border-radius: 50%;
@@ -592,23 +613,23 @@ a:hover {
   font-family: var(--font-chinese);
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--primary);
-  border: 2.5px solid var(--primary);
+  color: var(--blue-500);
+  border: 2.5px solid var(--blue-500);
   border-radius: 6px;
   padding: 2px 8px;
   width: fit-content;
   line-height: 1;
-  background-color: var(--primary-light);
-  box-shadow: inset 0 0 8px rgba(59, 130, 246, 0.1);
+  background-color: var(--blue-100);
+  box-shadow: inset 0 0 8px rgba(95, 174, 255, 0.12);
   transition: var(--transition-smooth);
 }
 
 .bento-card:hover .card-number {
   color: #ffffff;
-  background-color: var(--primary);
-  border-color: var(--primary);
+  background-color: var(--blue-500);
+  border-color: var(--blue-500);
   transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.25);
+  box-shadow: 0 4px 12px rgba(95, 174, 255, 0.3);
 }
 
 .card-main-info {
@@ -620,7 +641,7 @@ a:hover {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--blue-700);
   letter-spacing: 1px;
   margin-bottom: var(--space-2);
 }
@@ -649,14 +670,14 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--blue-200);
   padding-top: var(--space-4);
 }
 
 .read-more-btn {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--blue-700);
   display: flex;
   align-items: center;
   gap: 4px;
@@ -674,9 +695,10 @@ a:hover {
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--text-secondary);
-  background-color: var(--slate-100);
+  background-color: var(--blue-100);
   padding: 2px 8px;
   border-radius: 4px;
+  border: 1px solid var(--blue-200);
 }
 
 /* Bento Grid Spans */
@@ -694,12 +716,14 @@ a:hover {
 
 .summary-card {
   position: relative;
-  background: linear-gradient(135deg, #ffffff 0%, #eff8ff 100%);
-  border: 1px solid var(--primary-border);
+  background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(220,239,255,0.5) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: var(--radius-lg);
   padding: var(--space-16);
   box-shadow: var(--shadow-md);
   overflow: visible;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .summary-card::before {
@@ -716,9 +740,9 @@ a:hover {
 }
 
 .summary-kicker {
-  color: var(--primary-hover);
-  background: var(--primary-light);
-  border: 1px solid var(--primary-border);
+  color: var(--blue-700);
+  background: var(--blue-100);
+  border: 1px solid var(--blue-200);
   border-radius: 999px;
   padding: 4px 16px;
   font-size: 0.72rem;
@@ -729,12 +753,13 @@ a:hover {
 .summary-heading h2 {
   font-size: 2.6rem;
   letter-spacing: -0.5px;
+  color: var(--blue-700);
 }
 
 .summary-block h3 {
   font-size: 1.3rem;
   margin-bottom: var(--space-4);
-  color: var(--primary-hover);
+  color: var(--blue-700);
 }
 
 .summary-block p,
@@ -749,8 +774,10 @@ a:hover {
 .summary-reflection {
   border-radius: var(--radius-md);
   padding: var(--space-12);
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(125, 211, 252, 0.45);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(207, 231, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .summary-intro,
@@ -766,12 +793,12 @@ a:hover {
 
 .experience-list p {
   padding-left: var(--space-8);
-  border-left: 3px solid var(--primary);
+  border-left: 3px solid var(--blue-500);
 }
 
 .summary-emphasis {
   margin-top: var(--space-8);
-  color: var(--primary-hover) !important;
+  color: var(--blue-700) !important;
   font-weight: 600;
 }
 
@@ -783,8 +810,8 @@ a:hover {
 
 .lesson-item {
   padding: var(--space-8);
-  background: var(--blue-50);
-  border: 1px solid var(--primary-border);
+  background: var(--blue-100);
+  border: 1px solid var(--blue-200);
   border-radius: var(--radius-sm);
 }
 
@@ -795,12 +822,12 @@ a:hover {
 }
 
 .lesson-item h4 span {
-  color: var(--primary-hover);
+  color: var(--blue-700);
   font-weight: 600;
 }
 
 .summary-reflection {
-  border-left: 4px solid var(--primary);
+  border-left: 4px solid var(--blue-500);
 }
 
 .summary-reflection h3 {
@@ -815,8 +842,8 @@ a:hover {
    FOOTER
 ---------------------------------------------------- */
 .footer {
-  background-color: #f7fff8;
-  border-top: 1px solid rgba(154, 197, 246, 0.18);
+  background: linear-gradient(180deg, var(--blue-50) 0%, #EEF7FF 100%);
+  border-top: 1px solid var(--blue-200);
   padding: 1rem 0;
 }
 
@@ -843,7 +870,7 @@ a:hover {
 }
 
 .footer-left strong {
-  color: var(--text-primary);
+  color: var(--blue-700);
   font-size: 0.95rem;
   font-weight: 700;
 }
@@ -876,7 +903,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(15, 23, 42, 0.4);
+  background-color: rgba(15, 23, 42, 0.35);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 200;
@@ -894,8 +921,8 @@ a:hover {
 }
 
 .modal-wrapper {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--glass-border);
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   width: 90%;
@@ -905,6 +932,8 @@ a:hover {
   flex-direction: column;
   transform: translateY(40px) scale(0.95);
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .modal-overlay.show .modal-wrapper {
@@ -916,19 +945,19 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   padding: var(--space-8) var(--space-12);
-  border-bottom: 1px solid var(--border-light);
-  background-color: var(--blue-50);
+  border-bottom: 1px solid var(--blue-200);
+  background-color: var(--blue-100);
 }
 
 .modal-badge {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--blue-700);
   text-transform: uppercase;
   background-color: #ffffff;
   padding: 4px 12px;
   border-radius: 20px;
-  border: 1px solid var(--primary-border);
+  border: 1px solid var(--blue-200);
 }
 
 .modal-close-btn {
@@ -942,7 +971,7 @@ a:hover {
 }
 
 .modal-close-btn:hover {
-  color: var(--text-heading);
+  color: var(--blue-700);
   transform: rotate(90deg);
 }
 
@@ -970,14 +999,14 @@ a:hover {
 
 .docx-content h2 {
   font-size: 1.8rem;
-  color: var(--text-heading);
-  border-left: 5px solid var(--primary);
+  color: var(--blue-700);
+  border-left: 5px solid var(--blue-500);
   padding-left: var(--space-4);
 }
 
 .docx-content h3 {
   font-size: 1.35rem;
-  color: var(--primary-hover);
+  color: var(--blue-700);
 }
 
 .docx-content p {
@@ -1007,28 +1036,28 @@ a:hover {
 .docx-content th, .docx-content td {
   padding: var(--space-6) var(--space-8);
   text-align: left;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--blue-200);
 }
 
 .docx-content th {
-  background-color: var(--primary-light);
-  color: var(--text-heading);
+  background-color: var(--blue-100);
+  color: var(--blue-700);
   font-weight: 600;
   font-family: var(--font-display);
 }
 
 .docx-content tr:nth-child(even) {
-  background-color: var(--slate-50);
+  background-color: var(--blue-50);
 }
 
 .docx-content tr:hover {
-  background-color: rgba(59, 130, 246, 0.03);
+  background-color: rgba(95, 174, 255, 0.05);
 }
 
 /* Image container and details */
 .content-image-box {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-light);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--blue-200);
   border-radius: var(--radius-md);
   padding: var(--space-4);
   margin: var(--space-8) auto;
@@ -1042,7 +1071,7 @@ a:hover {
 
 .content-image-box:hover {
   box-shadow: var(--shadow-md);
-  border-color: var(--primary-border);
+  border-color: var(--blue-300);
 }
 
 .content-image-box img {
@@ -1065,72 +1094,47 @@ a:hover {
   font-style: italic;
 }
 
-/* Styled Alert Blocks for Prompt & Highlights */
-.docx-alert-box {
-  background-color: var(--blue-50);
-  border-left: 4px solid var(--primary);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  padding: var(--space-6);
-  margin: var(--space-6) 0;
-  font-family: var(--font-sans);
-}
-
-.docx-alert-box.code-type {
-  background-color: var(--slate-100);
-  border-left-color: var(--slate-500);
-  font-family: Consolas, Monaco, monospace;
-  font-size: 0.95rem;
-}
-
-/* Timeline Layout for BTW1 Walkthrough */
+/* ----------------------------------------------------
+   TIMELINE STYLING
+---------------------------------------------------- */
 .timeline {
   position: relative;
-  max-width: 800px;
-  margin: var(--space-8) auto;
-  padding-left: 40px;
+  margin: var(--space-12) 0;
+  padding-left: var(--space-16);
 }
 
-.timeline::after {
+.timeline::before {
   content: '';
   position: absolute;
-  width: 4px;
-  background-color: var(--primary-light);
+  left: 0;
   top: 0;
   bottom: 0;
-  left: 17px;
-  margin-left: -2px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--blue-500) 0%, var(--blue-200) 100%);
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--space-12);
 }
 
-.timeline-dot {
+.timeline-item::before {
+  content: '';
   position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  border: 4px solid var(--primary);
-  left: -33px;
+  left: calc(-1 * var(--space-16) - 4px);
   top: 6px;
-  z-index: 10;
-  box-shadow: 0 0 8px var(--primary);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--blue-500);
+  border: 2px solid var(--blue-100);
+  box-shadow: 0 0 10px rgba(95, 174, 255, 0.3);
 }
 
-.timeline-content {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  padding: var(--space-8);
-  box-shadow: var(--shadow-sm);
-}
-
-.timeline-content h4 {
-  font-size: 1.15rem;
+.timeline-item h4 {
+  font-size: 1.1rem;
   margin-bottom: var(--space-2);
-  color: var(--text-heading);
+  color: var(--blue-700);
 }
 
 .timeline-content p {
@@ -1239,7 +1243,7 @@ a:hover {
 
 /* =====================================================
    TAB-BASED PAGE NAVIGATION
-   ===================================================== */
+===================================================== */
 .page {
   display: none;
   opacity: 0;
