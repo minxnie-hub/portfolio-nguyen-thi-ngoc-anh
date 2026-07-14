@@ -1,28 +1,30 @@
-/* ---- Tab Navigation ---- */
-function go(sectionId) {
-  // Hide all pages
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  // Show target page
-  const target = document.getElementById(sectionId);
-  if (target) {
-    target.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-  // Update nav active state
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('onclick')?.includes(sectionId)) {
-      link.classList.add('active');
-    }
-  });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('.page');
   const cards = document.querySelectorAll('.bento-card');
   const modal = document.getElementById('assignment-modal');
   const modalClose = document.getElementById('modal-close');
   const modalBody = document.getElementById('modal-body-content');
   const modalTag = document.getElementById('modal-tag');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(navLink => navLink.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+      });
+    });
+  }, { rootMargin: '-35% 0px -55% 0px' });
+
+  sections.forEach(section => sectionObserver.observe(section));
   
   // Category labels for each modal
   const categoryLabels = {

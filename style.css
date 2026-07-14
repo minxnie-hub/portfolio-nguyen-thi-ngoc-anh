@@ -511,7 +511,7 @@ a:hover {
    BENTO GRID / ASSIGNMENTS
 ---------------------------------------------------- */
 .assignments-section {
-  padding-top: 130px;
+  padding-top: var(--space-24);
   padding-bottom: var(--space-24);
 }
 
@@ -719,7 +719,7 @@ a:hover {
    REFLECTION & SUMMARY SECTION
 ---------------------------------------------------- */
 .summary-section {
-  padding-top: 130px;
+  padding-top: var(--space-24);
   padding-bottom: var(--space-24);
 }
 
@@ -1258,12 +1258,13 @@ a:hover {
 }
 
 /* =====================================================
-   TAB-BASED PAGE NAVIGATION
+   CONTINUOUS PAGE SECTIONS
 ===================================================== */
 .page {
-  display: none;
-  opacity: 0;
-  transform: translateY(20px);
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  scroll-margin-top: 90px;
   transition: opacity 0.45s ease, transform 0.45s ease;
 }
 
